@@ -11,7 +11,7 @@
 
 <p align="center">
   <img alt="Chain" src="https://img.shields.io/badge/chain-Robinhood%20Chain%20(4663)-8B5CF6?style=flat-square&labelColor=15131A">
-  <img alt="Status" src="https://img.shields.io/badge/market-pre--launch-F3F1EC?style=flat-square&labelColor=15131A">
+  <img alt="Status" src="https://img.shields.io/badge/market-live-8B5CF6?style=flat-square&labelColor=15131A">
   <img alt="Solidity" src="https://img.shields.io/badge/solidity-0.8.28-8B5CF6?style=flat-square&labelColor=15131A">
   <img alt="Foundry" src="https://img.shields.io/badge/built%20with-Foundry-F3F1EC?style=flat-square&labelColor=15131A">
   <img alt="Next.js" src="https://img.shields.io/badge/app-Next.js%2016-8B5CF6?style=flat-square&labelColor=15131A">
@@ -23,7 +23,7 @@
 **Lockedin** is a market on Robinhood Chain for locked bags. A holder sells tokens below the pool price in exchange for a lock. The buyer pays ETH today and receives a locked position that unlocks on a set date and can itself be sold on. The tokens move from wallet to wallet through escrow, never through the pool, and every fee buys **$LOCKED** and burns it.
 
 > [!NOTE]
-> **Status: pre-launch market.** The $LOCKED token address is `0xe4cf8418a6ee2dd37ac39f22ae33a84bfcbf987f`. The market contracts are written, reviewed and rehearsed on a fork of the live chain, and are not deployed on mainnet yet. Their addresses will be published here, on the website and on X at the same time. Any address shared elsewhere is not ours.
+> **Status: live on Robinhood Chain.** The market and its burner were deployed on 2026-10-08 and the app at [app.lockedin.family](https://app.lockedin.family) reads them. All addresses are in [Deployments](#deployments). Any address shared elsewhere is not ours.
 
 ## Contents
 
@@ -210,13 +210,16 @@ withdraw(to)                       // ETH an address refused
 
 ## Deployments
 
+Source verified on Sourcify (exact match) for the four Lockedin contracts.
+
 | Contract | Robinhood Chain (4663) |
 |---|---|
 | $LOCKED | [`0xe4cf8418a6ee2dd37ac39f22ae33a84bfcbf987f`](https://robin.etherscan.io/token/0xe4cf8418a6ee2dd37ac39f22ae33a84bfcbf987f) |
-| `LockedinMarket` | not deployed |
-| `LockedinBurner` | not deployed |
-| `LockedinLens` | not deployed |
-| `LockedinArt` | not deployed |
+| `LockedinMarket` | [`0x4A1bdcf3b400536fD2823ecfec027e9F6C0C6160`](https://robin.etherscan.io/address/0x4A1bdcf3b400536fD2823ecfec027e9F6C0C6160) |
+| `LockedinBurner` | [`0xe358c0090bC7c23a8e876145DCe82d7EA278f882`](https://robin.etherscan.io/address/0xe358c0090bC7c23a8e876145DCe82d7EA278f882) |
+| `LockedinLens` | [`0xf614Bd8820A2eA42B95192AbC76bbcf4Fd34F72b`](https://robin.etherscan.io/address/0xf614Bd8820A2eA42B95192AbC76bbcf4Fd34F72b) |
+| `LockedinArt` | [`0x831A870a3d0F2B5a7147b578A88D9F2A27d48beD`](https://robin.etherscan.io/address/0x831A870a3d0F2B5a7147b578A88D9F2A27d48beD) |
+| Guardian (can stop new listings only) | [`0x1ad5EAFAF01B68EDc6996BF877c82B02DCd505bE`](https://robin.etherscan.io/address/0x1ad5EAFAF01B68EDc6996BF877c82B02DCd505bE) |
 
 ## Roadmap
 
@@ -224,7 +227,10 @@ withdraw(to)                       // ETH an address refused
 - [x] Independent review, findings fixed and kept as tests
 - [x] Full rehearsal on a fork of the live chain with real Pons coins
 - [x] Landing page and docs at [lockedin.family](https://lockedin.family)
-- [ ] **Phase 2 · Launch:** $LOCKED on Pons, contracts verified, listing #1, external review, wallet record and badges, listing widget for coin sites
+- [x] $LOCKED on Pons and the market deployed on Robinhood Chain
+- [x] All four contracts verified on [Sourcify](https://sourcify.dev) (exact match)
+- [x] Burner called automatically every ten minutes while it holds fees
+- [ ] **Phase 2 · Launch:** listing #1, external review, wallet record and badges, listing widget for coin sites
 - [ ] **Phase 3 · Upgrade:** falling-price listings, bids on positions, fee payable in $LOCKED, official stock tokens as listable assets, public API keys
 - [ ] **Phase 4 · Ecosystem:** hold seasons, lending against positions, positions as a standard other apps read, a chain-wide locked supply dashboard
 
