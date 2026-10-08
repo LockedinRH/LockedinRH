@@ -11,7 +11,7 @@
 
 <p align="center">
   <img alt="Chain" src="https://img.shields.io/badge/chain-Robinhood%20Chain%20(4663)-8B5CF6?style=flat-square&labelColor=15131A">
-  <img alt="Status" src="https://img.shields.io/badge/status-pre--launch-F3F1EC?style=flat-square&labelColor=15131A">
+  <img alt="Status" src="https://img.shields.io/badge/market-pre--launch-F3F1EC?style=flat-square&labelColor=15131A">
   <img alt="Solidity" src="https://img.shields.io/badge/solidity-0.8.28-8B5CF6?style=flat-square&labelColor=15131A">
   <img alt="Foundry" src="https://img.shields.io/badge/built%20with-Foundry-F3F1EC?style=flat-square&labelColor=15131A">
   <img alt="Next.js" src="https://img.shields.io/badge/app-Next.js%2016-8B5CF6?style=flat-square&labelColor=15131A">
@@ -23,7 +23,7 @@
 **Lockedin** is a market on Robinhood Chain for locked bags. A holder sells tokens below the pool price in exchange for a lock. The buyer pays ETH today and receives a locked position that unlocks on a set date and can itself be sold on. The tokens move from wallet to wallet through escrow, never through the pool, and every fee buys **$LOCKED** and burns it.
 
 > [!NOTE]
-> **Status: pre-launch.** The contracts are written, reviewed and rehearsed on a fork of the live chain. Nothing is deployed on mainnet yet and the token has not launched. Contract addresses will be published here, on the website and on X at the same time. Any address shared elsewhere is not ours.
+> **Status: pre-launch market.** The $LOCKED token address is `0xe4cf8418a6ee2dd37ac39f22ae33a84bfcbf987f`. The market contracts are written, reviewed and rehearsed on a fork of the live chain, and are not deployed on mainnet yet. Their addresses will be published here, on the website and on X at the same time. Any address shared elsewhere is not ours.
 
 ## Contents
 
@@ -212,7 +212,7 @@ withdraw(to)                       // ETH an address refused
 
 | Contract | Robinhood Chain (4663) |
 |---|---|
-| $LOCKED | not launched |
+| $LOCKED | [`0xe4cf8418a6ee2dd37ac39f22ae33a84bfcbf987f`](https://robin.etherscan.io/token/0xe4cf8418a6ee2dd37ac39f22ae33a84bfcbf987f) |
 | `LockedinMarket` | not deployed |
 | `LockedinBurner` | not deployed |
 | `LockedinLens` | not deployed |
